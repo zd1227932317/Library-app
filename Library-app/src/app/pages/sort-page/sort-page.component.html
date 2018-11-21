@@ -1,0 +1,9 @@
+<app-header-page [title]="'分类'"></app-header-page>
+<div class="page-container">
+   <div *ngFor="let item of categorylist"  [routerLink]="[ '/list',{categoryId:item.Id}]">
+       <i>
+            <img [src]="item.Image" alt="">
+       </i>      
+    <span>{{item.Name}}</span>
+   </div>
+</div>

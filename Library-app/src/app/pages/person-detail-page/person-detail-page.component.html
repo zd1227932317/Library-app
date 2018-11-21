@@ -1,0 +1,35 @@
+<app-header-back-page [title]="'修改个人信息'"></app-header-back-page>
+<div class="confirm" (click)="finish_onclick()">
+    完成
+</div>
+<div class="container">
+    <div class="main-box" *ngIf="USER">
+        <header>基础信息</header>
+        <main>
+            <form [formGroup]="formModel" (submit)="frm_onsubmit()">
+                <div>
+                    <span>手机</span>
+                    <!-- <p>{{USER.Phone}}</p> -->
+                    <input type="text" id="txtPhone" [formControl]="txtPhone">
+                </div>
+                <div>
+                    <span>用户名</span>
+                    <!-- <p>{{USER.Name}}</p> -->
+                    <input type="text" id="txtUser" [formControl]="txtUser">
+                </div>
+                <div>
+                    <span>身份证号</span>
+                    <!-- <p>{{USER.CardId}}</p> -->
+                    <input type="text" id="txtCardid" [formControl]="txtCardid">
+                </div>
+                <div>
+                    <span>家庭住址</span>
+                    <!-- <p>{{USER.Address}}</p> -->
+                    <input type="text" id="txtAddress" [formControl]="txtAddress">
+                </div>
+            </form>
+        </main>
+    </div>
+</div>
+<app-dialog-model #confirm (afterconfirm)="confirm_onclick($event)"></app-dialog-model>
+<app-auto-dialog-model #autodialog></app-auto-dialog-model>

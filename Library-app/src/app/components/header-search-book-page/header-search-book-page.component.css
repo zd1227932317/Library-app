@@ -1,0 +1,50 @@
+.input-search
+{
+    background-color: white;
+    border-radius: 30px;
+    margin:auto;
+    width: 70%;
+    line-height: 4vh;
+    height: 4vh;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+}
+.input-search>i
+{
+    color: rgba(6,193,174,0.8);
+    font-size:2.5vh;
+    height: 4vh;
+    line-height: 4vh;
+    width: 4vh;
+    display: block;
+}
+.input-search>input
+{
+    height: 4vh;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 2vh;
+    box-sizing: border-box;
+    padding-left: 3vh;
+}
+.input-search>input::placeholder
+{
+    color: #999999;
+    font-size: 2vh;
+}
+.page-header>i
+{
+    position: absolute;
+    left:6vw;
+    top: 1.2vh;
+    font-size: 5vh;
+}
+.input-search>span
+{
+    position: absolute;
+    right:16%;
+    top: 35%;
+}

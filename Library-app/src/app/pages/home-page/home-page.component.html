@@ -1,0 +1,17 @@
+<app-header-search-page [routerLink]="[ '/search']"></app-header-search-page>
+<div class="page-container">
+  <!--轮播-->
+  <app-ad-banner [images]="myimages"></app-ad-banner>
+  <div class="item" *ngFor="let item of booklist">
+    <div class="item-header" (click)="title_onclick(item)">
+      <h3>{{item.Name}}</h3>
+      <i class="fa fa-ellipsis-h fa-lg"></i>
+    </div>
+    <div class="item-box" >
+      <div *ngFor="let book of item.Books" (click)="book_onclick(book.Book.Id)">
+        <img [src]="book.Book.Image"alt="">
+        <span>{{book.Book.Name}}</span>
+      </div>
+    </div>  
+  </div>
+</div>

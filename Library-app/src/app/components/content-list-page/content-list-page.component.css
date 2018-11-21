@@ -1,0 +1,65 @@
+.list-item
+{
+    margin: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+   box-shadow: 2px 3px 5px rgba(0,0,0,.3);
+}
+.list-item>i
+{
+    display: block;
+    width: 90px;
+}
+.list-item>i>img
+{
+    width: 100%;
+}
+.list-item>main
+{
+    flex: 1;
+    padding: 6px;
+    box-sizing: border-box;
+}
+.list-item>main>h2
+{
+    height: 40%;
+    line-height: 40%;
+    color: #333333;
+    font-weight: bold;
+}
+.list-item>main>p
+{
+    height: 20%;
+    line-height: 200%;
+    font-size: 12px;
+    color: #999999;
+}
+.list-item>i:last-child
+{
+  width: 30px;
+  margin: auto;
+  font-size: 24px;
+  color: #999999;
+    
+}
+.kewordNotFind
+{
+    margin:60px auto;
+    color: #999999;
+    height: 6vh;
+    text-align: center;
+}
+.kewordNotFind>i
+{
+    display: block;
+    font-size: 40px;
+    padding: 10px;
+}
+.kewordNotFind>h2
+{
+    font-size: 20px;
+}

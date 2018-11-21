@@ -1,0 +1,16 @@
+<app-header-back-page [title]="'重置'"></app-header-back-page>
+<div class="container">
+ <form   >
+   <div class="form-group">
+     <label for="txtPhone"><i class="iconfont icon-phone"></i></label>
+     <input type="text" id="txtPhone" placeholder="手机号"  [(ngModel)]="txtPhone" name="Phone">
+   </div>
+   <div class="form-group">
+    <label for="txtCode"><i class="iconfont  icon-Verification_code"></i></label>
+    <input type="text" id="txtCode" placeholder="验证码"  name="Code" [(ngModel)]="txtCode">
+    <button type="button" (click)="getcode_onclick()">获取验证码</button>
+  </div>
+  <button class="btnlogin" type="button" (click)="confirm_onclick()" >确认</button>
+ </form>
+</div>
+

@@ -1,0 +1,32 @@
+.page-nav
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8vh;
+    background: rgba(6,193,174,0.8);
+    display: flex;
+    color: white;
+    box-sizing: border-box;
+}
+.page-nav>div
+{
+    flex: 1;
+    text-align: center;
+    outline: none;
+}
+.page-nav>div>i
+{
+    line-height:5vh ;
+    display: block;
+    font-size: 20px;
+}
+.page-nav>div>span
+{
+    display: block;
+}
+.active
+{
+  color:rgba(0, 0, 0, .3);
+}

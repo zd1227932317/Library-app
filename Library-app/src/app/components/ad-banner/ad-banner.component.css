@@ -1,0 +1,14 @@
+.ad-box
+{
+    width: 100%;
+    /* height: 24vh; */
+    padding-top: 42%;
+    position: relative;
+    overflow: hidden;
+}
+.ad-box>img{
+ width: 100%;
+ position: absolute;
+ left: 0;
+ top: 0;
+}

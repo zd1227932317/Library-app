@@ -1,0 +1,54 @@
+.main-box
+{
+    background-color: white;
+    margin: 5px;
+    margin-top: 10px;
+    color:#666;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,.3);
+}
+.main-box>header
+{
+   height: 4vh;
+   line-height: 4vh;
+   padding-left: 20px;
+   padding-top: 10px;
+    font-size: 16px;
+}
+.main-box>main
+{
+   padding-left: 30px;
+   padding-right: 20px;
+   box-sizing: border-box;
+}
+.main-box>main div
+{
+    display: flex;
+    height: 6vh;
+    line-height: 6vh;
+    border-bottom: 1px solid #dddddd;
+}
+.main-box>main div>span
+{
+    width: 120px;
+    display: block;
+    color: #333333;
+}
+.main-box>main input
+{
+    flex: 1;
+    display: block;
+    outline: none;
+    border: none;
+}
+
+.confirm
+{
+    position: fixed;
+    right: 12px;
+    color:#f2f2f2;
+    top: 12px;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+}

@@ -1,0 +1,29 @@
+.input-search
+{
+    background-color: white;
+    border-radius: 30px;
+    margin: auto;
+    width: 60%;
+    line-height: 4vh;
+    height: 4vh;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+}
+.input-search>input
+{
+    width: 80%;
+    height: 3.9vh;
+    border: none;
+    outline: none;
+    font-size: 2vh;
+}
+.input-search>i
+{
+    color: rgba(6,193,174,0.8);
+    font-size: 2vh;
+    display: block;
+    line-height: 4vh;
+    padding-left: 2.5vh;
+}

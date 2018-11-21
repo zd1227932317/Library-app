@@ -1,0 +1,10 @@
+<div class="dialog" *ngIf="state">
+  <div>
+    <header>{{dialogparams.title}}</header>  
+    <main>{{dialogparams.message}}</main>
+    <footer>
+      <button (click)="state=false"><span>取消</span></button>
+      <button  (click)="confirm_onclick($event)"><span>确认</span></button>
+    </footer>
+  </div>
+</div>

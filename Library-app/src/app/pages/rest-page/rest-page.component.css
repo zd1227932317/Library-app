@@ -1,0 +1,88 @@
+.container
+{
+    background-color: white;
+}
+.container>form
+{
+    padding: 15px;
+    box-sizing: border-box;
+    
+}
+.form-group
+{
+   
+    margin-top: 10px;
+    height: 6vh;
+    display: flex;
+    border-bottom: 1px solid #dddddd;
+}
+.form-group button
+{
+    border: none;
+    background-color: rgba(6,193,174,0.8);
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+}
+.form-group>input
+{
+    outline: none;
+    border: none;
+    display: block; 
+    flex: 1;
+    padding-left: 10px;
+}
+.form-group>input::placeholder
+{
+    color: #999999;
+}
+.form-group>label
+{
+    display: block;
+    width: 30px;
+    line-height: 6vh;
+    text-align: center;
+    color: #999999;
+}
+.iconfont
+{
+    font-size: 24px;
+}
+.btnlogin
+{
+    display: block;
+    background-color:rgba(6,193,174,0.8);
+    width: 100%;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    height: 6vh;
+    line-height: 6vh;
+    border-radius:20px;
+    letter-spacing: 6px;
+    outline: none;
+}
+.forget
+{
+    margin-top: 10px;
+    height: 6vh;
+    line-height: 6vh;
+    color: #999999;
+    text-align: right;
+
+}
+.disabled
+{
+    color: #dddddd;
+}
+.error
+{
+    padding: 5px;
+    color: red;
+    text-align: center;
+    height: 4vh;
+    line-height: 4vh;
+}

@@ -1,0 +1,31 @@
+<app-header-back-page [title]="'设置'"></app-header-back-page>
+<div class="container">
+  <div class="main-box">
+    <main>
+      <div>
+        <span>安全设置</span>
+        <i class="fa fa-angle-right fa-lg"></i>
+      </div>
+      <div>
+        <span>隐私</span>
+        <i class="fa fa-angle-right fa-lg"></i>
+      </div>
+      <div>
+        <span>清除缓存</span>
+        <i class="fa fa-angle-right fa-lg"></i>
+      </div>
+      <div>
+        <span>评价一下</span>
+        <i class="fa fa-angle-right fa-lg"></i>
+      </div>
+    </main>
+  </div>
+  <div class="main-box" *ngIf="USER">
+    <main>
+      <div (click)="loGoOut_onclcik()">
+        <span style="text-align: center">退出当前账号</span>
+      </div>
+    </main>
+  </div>
+</div>
+<app-dialog-model #confirm (afterconfirm)="confirm_onclick($event)"></app-dialog-model>

@@ -1,0 +1,8 @@
+<div class="dialog" *ngIf="state" (click)="state=false">
+    <div (click)="dialog_onclick()">
+      <header>{{dialogparams.title}}</header>  
+      <main>{{dialogparams.message}}</main>
+      <footer>将在1s后消失</footer>
+    </div>
+  </div>
+  

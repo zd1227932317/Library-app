@@ -1,0 +1,7 @@
+<div class="page-header">
+    <i class="fa fa-angle-left fa-lg" (click)="back()"></i>
+    <div class="input-search">
+        <input type="text" [placeholder]="message" [(ngModel)]="keyword" (keyup)="input_change($event)" (keyup.enter)="searchicon_onclick()">
+        <i class="fa fa-search fa-lg" (click)="searchicon_onclick()" ></i>  
+      </div>   
+  </div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="list-item"  *ngFor="let item of list"  [routerLink]="['/detail',item.Book.Id]">
+    <i>
+        <img [src]="item.Book.Image" alt="">
+    </i>
+   <main>
+     <h2>{{item.Book.Name}}</h2>
+     <p>{{item.Book.Author.Name}}</p>
+     <p>{{item.Book.PublishDate}}</p>
+     <p>{{item.Book.Publisher.Name}}</p>
+   </main>
+      <i class="fa fa-angle-right fa-lg"></i>
+  </div>
+
+  <div *ngIf="notbboklist" class="kewordNotFind">
+    <i class="iconfont icon-empty"></i>
+     <h2>暂无搜索结果</h2>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+.dialog
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,.3 );
+}
+.dialog>div
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border: 1px solid #dddddd;
+    /* padding: 5px; */
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.dialog header
+{
+   color: #333333;
+   font-size: 14px;
+   font-weight: bold;
+    line-height: 6vh;
+}
+.dialog footer
+{
+    display: flex;
+    border-top: 1px solid #dddddd;
+    overflow: hidden;
+   
+}
+.dialog main
+{
+    width: 40vh;
+    line-height: 6vh;
+    color: #666666;
+}
+.dialog footer button
+{
+    display: block;
+    flex: 1;
+    border: none;
+    line-height: 6vh;
+    background-color: white;
+    color: #488aff;
+    
+}
+.dialog footer button:last-of-type
+{
+    border-left: 1px solid #dddddd;
+    font-weight: bold;
+}

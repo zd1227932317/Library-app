@@ -1,0 +1,41 @@
+<app-header-page [title]="'书架'"></app-header-page>
+<div class="edit" *ngIf="shelflist.length!=0">
+    <button *ngIf="editstate" (click)="editstate=!editstate">编辑</button>  
+    <button *ngIf="!editstate" (click)="editstate=!editstate">完成</button>
+</div>
+<div class="page-container">
+    <div style="padding-bottom: 6vh;" >
+        <div class="list-item" *ngFor="let item of shelflist;let i=index;"  (click)="bookdetail_onclick(item.Book.Id)">
+            <main>
+                <i class="iconfont " [ngClass]="{'icon-nochecked':selectedItems[i],'icon-checked-fill':!selectedItems[i] }"
+                    (click)="selected_onclick(i)"></i>
+                <i class="img-container">
+                    <img [src]="item.Book.Image" alt="">
+                </i>
+                <div class="middle">
+                    <h2>{{item.Book.Name}}</h2>
+                    <p>{{item.Book.Author.Name}}</p>
+                    <p>{{item.Book.Category.Name}}</p>
+                    <p>{{item.Book.Publisher.Name}}</p>
+                </div>
+                <i class="fa fa-trash" (click)="removebook_onclick(item)" *ngIf="!editstate"></i>
+                <i class="fa fa-angle-right fa-lg" *ngIf="editstate"></i>
+            </main>
+        </div>
+    </div>
+    <div *ngIf="shelflist.length==0" class="empty">  
+        <i class="iconfont icon-konggouwuche"></i>
+        <h2>您的书架空空如也</h2>
+        <button (click)="btnBorrow_onclick()">去借阅</button>
+    </div>
+    <footer *ngIf="shelflist.length!=0">
+        <i class="iconfont" [ngClass]="{'icon-nochecked':!allchecked,'icon-checked-fill':allchecked}" (click)="allselected_onclick()"></i>
+        <span>全选</span>
+        <div class="count">
+            合计: <span>{{count()}}本</span>
+            <button (click)="submitOrder_onclick()" *ngIf="editstate"  [disabled]="canclick()">提交订单</button>
+            <button *ngIf="!editstate" class="delete" (click)="delete_onclick()" [disabled]="canclick()">删除</button>
+        </div>
+    </footer>
+</div>
+<app-dialog-model #confirm (afterconfirm)="confirm_onclick($event)"></app-dialog-model>

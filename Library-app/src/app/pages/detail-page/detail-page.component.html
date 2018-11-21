@@ -1,0 +1,37 @@
+<app-header-back-page [title]="'图书详情'"></app-header-back-page>
+<div class="container">
+  <div style="padding-bottom: 10vh;"> 
+      <div class="book-prview">
+          <img *ngIf="bookdetail"[src]="bookdetail.Book.Image" alt="">
+        </div>
+        <div class="book—name" *ngIf="bookdetail">
+           {{bookdetail.Book.Name}}
+        </div>
+        
+        <div class="book-desc">
+            <div class="book-desc-header">
+            <div [ngClass]="{'active': activestate}" (click)="activestate=!activestate">图书详情</div>
+            <div [ngClass]="{'active': !activestate}" (click)="activestate=!activestate">图书简介</div>
+          </div >
+          <div class="book-desc-main book-argument" *ngIf="activestate && bookdetail">
+              <div class="detail-item"><label >作者</label><span>{{bookdetail.Book.Author.Name}}</span></div>
+              <div class="detail-item"><label >出版社</label><span>{{bookdetail.Book.Publisher.Name}}</span></div>
+              <div class="detail-item"><label >出版时间</label><span>{{bookdetail.Book.PublishDate}}</span></div>
+              <div class="detail-item"><label>ISBN</label><span>{{bookdetail.Book.ISBN}}</span></div>
+              <div class="detail-item"><label >图书类别</label><span>{{bookdetail.Book.Category.Name}}</span></div>
+              <div class="detail-item"><label >库存总数</label><span>{{bookdetail.Book.Amount}}</span></div>
+              <div class="detail-item"><label >可借数量</label><span>{{bookdetail.Number}}</span></div>
+          </div>
+          <div class="book-desc-main book-intro" *ngIf="!activestate && bookdetail">
+             <span>{{bookdetail.Book.Introduce}}</span>
+          </div>
+        </div>
+  </div>
+  
+  <div class="footer" *ngIf="bookdetail">
+    <div  [routerLink]="['/main/shelf']"  > <p>我的书架</p> <span>{{bookNumber}}</span></div>
+    <button class="default" (click)="addbookshelf_onclick(bookdetail)" *ngIf="bookdetail.Number" >加入借书架</button>
+    <button class="disabled" disabled *ngIf="!bookdetail.Number">暂无库存</button>
+  </div>
+</div>
+<app-auto-dialog-model #autodialog></app-auto-dialog-model>

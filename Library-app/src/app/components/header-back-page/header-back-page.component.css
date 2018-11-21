@@ -1,0 +1,7 @@
+.page-header>i
+{
+    position: absolute;
+    left: 6vw;
+    top: 1.5vh;
+    font-size: 30px;
+}

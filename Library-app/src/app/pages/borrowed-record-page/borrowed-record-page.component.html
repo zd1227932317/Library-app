@@ -1,0 +1,31 @@
+<app-header-back-page [title]="'借阅记录'"></app-header-back-page>
+<div class="container">
+  <div class="recordlist">
+    
+    <div class="recordlist-header">
+      <div>
+          <div [ngClass]="{'active': state}"  (click)="changelist_onclick()">当前借阅</div>
+          <div [ngClass]="{'active': !state}"  (click)="changelist_onclick()">借阅历史</div>
+      </div>
+    </div>
+    <div class="recordlist-main">
+        <div class="recordlist-item" *ngFor="let item of list" (click)="bookdetail_onclick(item)">
+            <i>
+                <img [src]="item.BookImage" alt="">
+            </i>
+           <main>
+             <h2>{{item.BookName}}</h2>
+             <p>{{item.AuthorName}}</p>
+             <p>{{item.PublisherName}}</p>
+             <p>{{item.CreateTime| date:'yyyy-MM-dd'}}</p>
+           </main>
+           <div >
+              <button *ngIf="state" (click)="Transaction_onclick(item)">{{item.State==1?'取消订阅':'确认收货'}}</button>
+              <span *ngIf="!state">{{Orderstatus(item)}}</span>
+           </div>     
+        </div>
+    </div>  
+  </div>
+</div>
+<app-dialog-model #confirm (afterconfirm)="confirm_onclick($event)"></app-dialog-model>
+<app-auto-dialog-model #autodialog></app-auto-dialog-model>

@@ -1,0 +1,26 @@
+<app-header-search-book-page (searchKeyword)="getkeyword($event)" [message]="message" (inputChange)="changekeyword($event)" ></app-header-search-book-page>
+<div class="container" *ngIf="searchResult" >
+  <div class="hot-search">
+    <header> 
+      <span>热门搜索</span> 
+      <i class="fa fa-refresh" ></i>
+    </header>
+    <main>
+      <div *ngFor="let item of hotlist" (click)="hot_onclick(item)">
+        {{item}}
+      </div>
+    </main>
+  </div>
+  <div class="histroy-search" *ngIf="histroylist.length!=0">
+    <header>历史搜索</header>
+    <main>
+      <div class="histroy-item" *ngFor="let item of histroylist;let i=index;" (click)="history_onclick(item)">
+        <i class="fa fa-clock-o"></i>
+        <span>{{item}}</span>
+        <i class="fa fa-close" (click)="rubbish_onclick(i)"></i>
+      </div>
+    </main>
+    <footer (click)="clearhistory_onclick()">清空历史</footer>
+  </div>
+</div>
+<app-content-list-page [list]="booklist" *ngIf="!searchResult" [notbboklist]="notbooklist"></app-content-list-page>

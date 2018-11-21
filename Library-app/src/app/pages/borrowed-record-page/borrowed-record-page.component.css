@@ -1,0 +1,103 @@
+.recordlist
+{
+    background-color: white;
+    padding-top: 6vh;
+}
+.recordlist-header
+{
+   
+    /* width: 100%; */
+    position: fixed;
+    top: 6vh;
+    left: 0;
+    right: 0;
+    margin-top: 1px;
+    background-color: white;
+}
+.recordlist-header>div
+{
+    width: 80%;
+    display: flex;
+    margin: auto;
+   
+
+}
+.recordlist-header>div>div
+{
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    line-height: 6vh;
+    color: #999999;
+}
+.recordlist-main
+{
+    margin-top: 3px;
+    box-sizing: border-box;
+    line-height: 4vh;
+    color: #333333;
+}
+.recordlist-item
+{
+    margin: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+}
+.recordlist-item>i
+{
+    display: block;
+    width: 90px;
+}
+.recordlist-item>i>img
+{
+    width: 100%;
+}
+.recordlist-item>main
+{
+    flex: 1;
+    padding: 6px;
+    box-sizing: border-box;
+}
+.recordlist-item>main>h2
+{
+    height: 40%;
+    line-height: 40%;
+    color: #333333;
+    font-weight: bold;
+}
+.recordlist-item>main>p
+{
+    height: 20%;
+    line-height: 200%;
+    font-size: 12px;
+    color: #999999;
+}
+.recordlist-item>div
+{
+  margin: auto;
+  color: #999999;   
+}
+.recordlist-item>div>button
+{
+    color: rgba(6,193,174,0.8); 
+    border: 1px solid rgba(6,193,174,0.8); 
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+}
+.recordlist-item>div>span
+{
+    color: rgba(6,193,174,0.8); 
+    font-size: 12px;
+}
+.active
+{
+    color: #333333 !important;
+    border-bottom: 2px solid rgba(6,193,174,0.8);
+}

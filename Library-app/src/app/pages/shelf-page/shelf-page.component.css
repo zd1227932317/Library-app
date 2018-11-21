@@ -1,0 +1,176 @@
+.list-item
+{
+    margin: 5px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius:4px;
+   box-shadow: 2px 3px 5px rgba(0,0,0,.3);
+  
+}
+.iconfont
+{
+ color: rgba(6,193,174,0.8);
+ font-size: 24px;
+ line-height: 4vh; 
+ display: block;
+}
+.list-item>main
+{
+    margin: 10px;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.list-item>main>i:first-child
+{
+    display: block;
+    width: 40px;
+    line-height: 90px;
+}
+.img-container
+{
+    width: 90px;
+    display: block;
+    box-sizing: border-box;
+}
+.img-container>img
+{
+width: 100%;
+}
+.middle
+{
+    padding-left: 10px;
+    box-sizing: border-box;
+    flex: 1;
+}
+.middle>h2
+{
+    height: 40%;
+    line-height: 100%;
+    color: #333333;
+    font-weight: bold;
+}
+.middle>p
+{
+    height: 20%;
+    line-height: 150%;
+    font-size: 12px;
+    color: #999999;
+}
+.middle+i
+{
+    font-size: 24px;
+    display: block;
+    width: 30px;
+    line-height: 90px;
+    text-align: center;
+    color: rgba(6,193,174,0.8);
+}
+footer
+{
+    position: fixed;
+    bottom: 8vh;
+    left: 0;
+    right: 0;
+    height: 6vh;
+    background-color: white;
+    border-top: 1px solid #ddd;
+  padding-left: 10px;
+  display: flex;
+    /* box-sizing: border-box; */
+}
+footer>i
+{
+    display: block;
+    line-height: 6vh;
+}
+footer>span
+{
+    display: block;
+    line-height: 6vh;
+    font-size: 12px;
+    color: #999999;
+    padding-left: 10px;
+    flex: 1;
+}
+.count
+{
+  padding-right: 15px;
+  box-sizing: border-box;
+  line-height: 6vh;
+  color: #999999;
+  font-size: 14px;
+  font-weight: bold;
+}
+.count>button
+{
+    margin-left: 5px;
+    border: none;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #06c1ae;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+.count>span
+{
+    padding-right: 10px;
+   
+}
+.empty
+{
+    margin:60px auto;
+    color: #999999;
+    height: 6vh;
+    text-align: center;
+}
+.empty>h2
+{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.empty>i
+{
+    display: block;
+    font-size: 50px;
+    padding: 10px;
+    line-height: 60px;
+    color: #999999;
+}
+.empty>button
+{
+   
+    display: block;
+    border: none;
+    background-color: #06c1ae;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 8px;
+    margin: auto;
+    outline: none;
+}
+.edit
+{
+    position: fixed;
+    right: 2vh;
+    top: 1vh;
+   
+}
+.edit>button
+{
+    padding: 3px;
+    color: white;
+    background-color:rgba(6,193,174,0);
+    border: none;
+    font-size: 2vh;
+}
+.delete
+{
+    background-color:#F23030 !important;
+    letter-spacing: 2px;
+}

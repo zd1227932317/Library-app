@@ -1,0 +1,65 @@
+<app-header-page [title]="'我的'"></app-header-page>
+<div class="setting" [routerLink]="[ '/setting' ]">
+    <i class="iconfont icon-shezhi1-copy"></i>
+</div>
+<div class="page-container">
+    <div class="item" *ngIf="!USER">
+您还未登录，请  <span  [routerLink]="[ '/login',{url:'/main/mine'}]">登录</span>
+</div>
+    <div class="item" *ngIf="USER" [routerLink]="[ '/personalDetail']" >
+        <i>
+            <img src="assets/images/user1-128x128.jpg" alt="">
+        </i>
+        <div>
+            <div> {{USER.Name}}</div>
+            <div> {{USER.Phone}}</div>
+        </div>
+        <i class="fa fa-angle-right"></i>
+    </div>
+    <div class="main-box">
+        <header>图书管理</header>
+        <main>
+            <div  [routerLink]="[ '/borrowedRecord']">
+                <i class="iconfont icon-jilu"></i>
+                <span>借阅记录</span>
+                <i class="fa fa-angle-right fa-lg"></i>
+            </div>
+            <div>
+                <i class="iconfont icon-dizhi"></i>
+                <span>我的地址</span>
+                <i class="fa fa-angle-right fa-lg"></i>
+            </div>
+            <div>
+                <i class="iconfont icon-icon-"></i>
+                <span>我的订单</span>
+                <i class="fa fa-angle-right fa-lg"></i>
+            </div>
+            <div>
+                <i class="iconfont icon-baoguo"></i>
+                <span>我的包裹</span>
+                <i class="fa fa-angle-right fa-lg"></i>
+            </div>
+        </main>
+    </div>
+
+    <div class="main-box">
+            <header>关于</header>
+            <main>
+                <div>
+                    <i class="iconfont icon-plane"></i>
+                    <span>问题反馈</span>
+                    <i class="fa fa-angle-right fa-lg"></i>
+                </div>
+                <div>
+                    <i class="iconfont icon-changjianwenti"></i>
+                    <span>常见问题</span>
+                    <i class="fa fa-angle-right fa-lg"></i>
+                </div>
+                <div>
+                    <i class="iconfont icon-banbenjiance"></i>
+                    <span>版本检测</span>
+                    <i class="fa fa-angle-right fa-lg"></i>
+                </div>
+            </main>    
+        </div>
+</div>

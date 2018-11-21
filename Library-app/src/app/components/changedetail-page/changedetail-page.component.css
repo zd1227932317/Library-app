@@ -1,0 +1,26 @@
+.form-group
+{
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    border-bottom: 1px solid #dddddd;
+    border-top:1px solid #dddddd;
+}
+.form-group>input[type=text]
+{
+    border:none;
+    line-height: 6vh;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+}
+.confirm
+{
+    position: fixed;
+    right: 12px;
+    color:#f2f2f2;
+    top: 12px;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+}
